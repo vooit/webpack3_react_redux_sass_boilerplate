@@ -54,36 +54,29 @@ const config = {
                     ],
                     fallback: 'style-loader'
                 })
-            },
-            // file-loader(for images)
-            {
+            }, {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {name: '[name].[ext]', outputPath: './assets/media/'}
                 }]
             },
-            // file-loader(for fonts)
             {test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader']}
 
         ]
     },
 
     plugins: [
-        // cleaning up only 'dist' folder
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             template: 'index.html'
         }),
-        // extract-text-webpack-plugin instance
         extractPlugin
     ],
 
     devServer: {
-        // static files served from here
         contentBase: path.resolve(__dirname, "./dist/assets/media"),
         compress: true,
-        // open app in localhost:2000
         port: 2000,
         stats: 'errors-only',
         open: true

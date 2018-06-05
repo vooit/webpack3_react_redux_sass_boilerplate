@@ -1,6 +1,5 @@
 {
-  "name": "project_name2",
-  "version": "1.0.0",
+  "name": "webpack_3_react_starter",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,6 +26,7 @@
     "react": "^16.2.0",
     "sass-loader": "~6.0.6",
     "style-loader": "~0.18.2",
+    "svg-react-loader": "^0.4.5",
     "webpack": "~3.6.0",
     "webpack-dev-server": "~2.9.1"
   },
