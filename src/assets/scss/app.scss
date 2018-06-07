@@ -46,8 +46,10 @@ body {
     height: 60px;
     z-index: 1;
     display: flex;
+    justify-content: space-around;
     .playlist-ico {
 
     }
+    color: #2b2c2b;
   }
 }
